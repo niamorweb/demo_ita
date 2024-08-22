@@ -60,19 +60,29 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="py-20 px-10">
-      <div className="max-w-[1400px] mx-auto flex items-center justify-center flex-col gap-14">
-        <div className="flex flex-col items-center gap-3 text-center max-w-[700px]">
-          <span className="uppercase">Témoignages</span>
-          <h2 className="text-5xl font-semibold">
-            Ce sont nos clients qui parlent le mieux de nous
-          </h2>
+    <section className="py-32 px-10 bg-[#0D002D] text-white">
+      <div className="max-w-[1400px] mx-auto flex items-start justify-center flex-col gap-14">
+        <div className="flex items-end justify-between w-full">
+          <div className="flex flex-col items-start gap-3 text-start max-w-[700px]">
+            <span className="uppercase text-sm font-extralight">
+              Témoignages
+            </span>
+            <h2 className="text-5xl font-semibold text-white/70">
+              Ce sont nos clients qui parlent le mieux de nous
+            </h2>
+          </div>
+          <div className="flex items-center gap-3">
+            <ArrowLeft
+              onClick={prevTestimonial}
+              className="cursor-pointer text-2xl"
+            />
+            <ArrowRight
+              onClick={prevTestimonial}
+              className="cursor-pointer text-2xl"
+            />
+          </div>
         </div>
         <div className="flex items-center gap-4 relative">
-          <ArrowLeft
-            onClick={prevTestimonial}
-            className="absolute left-[-50px] cursor-pointer text-2xl"
-          />
           <div className="overflow-hidden w-full">
             <motion.div
               className="flex gap-4"
@@ -85,7 +95,7 @@ export default function Testimonials() {
                 .map((testimonial, index) => (
                   <motion.div
                     key={testimonial.id}
-                    className="flex-shrink-0 flex flex-col border border-black/70 rounded-xl p-6 gap-4 max-w-[350px] text-sm"
+                    className="flex-shrink-0 flex flex-col border border-white/70 rounded-xl p-6 gap-4 max-w-[350px] text-sm"
                   >
                     <Image
                       className="w-[50px] h-[50px] rounded-full object-cover"
@@ -103,10 +113,10 @@ export default function Testimonials() {
                 ))}
             </motion.div>
           </div>
-          <ArrowRight
+          {/* <ArrowRight
             onClick={nextTestimonial}
             className="absolute right-[-50px] cursor-pointer text-2xl"
-          />
+          /> */}
         </div>
       </div>
     </section>

@@ -5,8 +5,8 @@ import CircleSVG from "@/assets/hero_circle.svg";
 
 export default function Hero() {
   return (
-    <section className="px-10 min-h-[80vh] pt-10 pb-20 flex items-center justify-center">
-      <div className="max-w-[1400px] mx-auto grid grid-cols-2 gap-14">
+    <section className="px-10 min-h-n[80vh] pt-10 pb-20 flex items-center justify-center">
+      <div className="max-w-[1400px] overflow-hidden mx-auto grid grid-cols-2 gap-14">
         <div className="flex flex-col gap-4">
           <h1 className="text-[90px] leading-[90px] font-bold inline-block ">
             Elever l’analyse de{" "}

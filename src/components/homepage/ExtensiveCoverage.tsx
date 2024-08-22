@@ -1,11 +1,12 @@
 import React from "react";
 import interventionsArea from "@/assets/intervention-areas.svg";
 import Image from "next/image";
+import CarouselCompanies from "./CarouselCompanies";
 
 export default function ExtensiveCoverage() {
   return (
-    <section className="py-20 px-10">
-      <div className="max-w-[1400px] mx-auto flex flex-col gap-12 items-center text-center">
+    <section className="py-32 px-10">
+      <div className="max-w-[1400px] overflow-hidden mx-auto flex flex-col gap-12 items-center text-center">
         <div className="flex flex-col gap-14 max-w-[1000px]">
           <div className="flex flex-col gap-3">
             <span className="uppercase">Couverture étendue</span>
@@ -21,7 +22,7 @@ export default function ExtensiveCoverage() {
               height={500}
               alt="Description of the image"
             />
-            <div className="flex flex-col gap-3 text-start">
+            <div className="flex flex-col gap-3 text-start text-black/70">
               <p>
                 Intheair déploie la première plateforme française de
                 visualisation et d'exploitation de vos projets digitalisés.
@@ -32,6 +33,10 @@ export default function ExtensiveCoverage() {
               </p>
             </div>
           </div>{" "}
+        </div>
+        <div className="flex flex-col gap-3 text-center">
+          <p>Avec la confiance de nos partenaires</p>
+          <CarouselCompanies />
         </div>
       </div>
     </section>

@@ -57,7 +57,7 @@ const LogoCarousel = () => {
         initial={{ x: 0 }}
         animate={{ x: "-50%" }} // Défilement de 50% pour un effet de continuité
         transition={{
-          duration: 6, // Durée du défilement
+          duration: 14, // Durée du défilement
           repeat: Infinity,
           ease: "linear",
         }}

@@ -77,16 +77,20 @@ export default function YourSupport() {
   }, []);
 
   return (
-    <section className="py-20 px-10">
-      <div className="max-w-[1400px] mx-auto flex items-center justify-center flex-col gap-8">
-        <div className="flex flex-col items-center gap-3 text-center">
+    <section className="py-32 px-10">
+      <div className="max-w-[1400px] mx-auto flex items-start justify-center gap-8 relative">
+        <div className="flex flex-col gap-3 sticky top-20">
           <span className="uppercase">Support</span>
           <h2 className="text-5xl font-semibold">
             Votre accompagnement sur-mesure
           </h2>
-          <p>On s'occupe de tout</p>
+          <p className=" text-black/70">On s'occupe de tout</p>
+
+          <button className="mt-3 w-fit rounded-3xl bg-black text-white hover:scale-[102%] duration-150 py-3 px-6">
+            Demander une démo
+          </button>
         </div>
-        <div className="w-full max-w-[1000px] mx-auto">
+        <div className="w-full max-w-[1000px] mx-auto overflow-hidden">
           {steps.map((step, index) => (
             <motion.div
               key={step.id}
@@ -109,7 +113,7 @@ export default function YourSupport() {
                   {step.id}
                 </span>
                 <h4 className="font-semibold text-lg mt-4">{step.title}</h4>
-                <p className="mt-2">{step.description}</p>
+                <p className="mt-2 text-black/70">{step.description}</p>
               </div>
 
               <motion.div

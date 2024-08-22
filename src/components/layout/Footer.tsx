@@ -3,9 +3,9 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="px-10 py-20">
-      <div className="max-w-[1400px] mx-auto flex flex-col gap-5">
-        <nav className="grid grid-cols-4 gap-3 bg-black/90 text-white rounded-3xl py-20 px-10">
+    <footer className="px-10 py-20 bg-[#0D002D] text-white">
+      <div className="max-w-[1400px] overflow-hidden mx-auto flex flex-col gap-5">
+        <nav className="grid grid-cols-4 gap-3 bg-white text-[#0D002D] rounded-3xl py-20 px-10">
           <div className="flex flex-col gap-3 text-sm">
             <span className="text-xl font-semibold">intheair</span>
             <p>

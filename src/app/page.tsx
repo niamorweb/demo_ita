@@ -13,18 +13,18 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <>
+    <div className="relative">
       <Header />
       <Hero />
-      <TheyTrustUs />
+      {/* <TheyTrustUs /> */}
       <OurGoal />
       <OurPrestations />
       <YourSupport />
       <ExtensiveCoverage />
-      <KeysNumbers />
+      {/* <KeysNumbers /> */}
       <Testimonials />
       <CallToAction />
       <Footer />
-    </>
+    </div>
   );
 }
