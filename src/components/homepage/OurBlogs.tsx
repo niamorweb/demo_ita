@@ -48,7 +48,7 @@ export default function OurBlogs() {
               recommandations concrètes
             </p>
           </div>
-          <button className="mt-3 w-fit rounded-3xl bg-[#0B001C] text-white hover:scale-[102%] duration-150 py-3 px-6">
+          <button className="mt-3 w-fit rounded-3xl bg-main text-white hover:scale-[102%] duration-150 py-3 px-6">
             Voir tous les articles
           </button>{" "}
         </div>

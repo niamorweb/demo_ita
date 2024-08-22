@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="px-10 py-20 bg-[#0B001C] text-white">
+    <footer className="px-10 py-20 bg-main text-white">
       <div className="max-w-[1400px] overflow-hidden mx-auto flex flex-col gap-5">
         <nav className="grid grid-cols-4 gap-3 bg-white text-[#0B001C] rounded-3xl py-20 px-10">
           <div className="flex flex-col gap-3 text-sm">

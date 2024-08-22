@@ -86,7 +86,7 @@ export default function YourSupport() {
           </h2>
           <p className=" text-black/70">On s'occupe de tout</p>
 
-          <button className="mt-3 w-fit rounded-3xl bg-[#0B001C] text-white hover:scale-[102%] duration-150 py-3 px-6">
+          <button className="mt-3 w-fit rounded-3xl bg-main text-white hover:scale-[102%] duration-150 py-3 px-6">
             Demander une démo
           </button>
         </div>

@@ -1,8 +1,17 @@
+import Image from "next/image";
 import React from "react";
 
 export default function OurGoal() {
+  const stats = [
+    { value: "800", label: "Ha topographiés" },
+    { value: "250+", label: "Projets réalisés" },
+    { value: "15+", label: "Ingénieurs spécialisés" },
+    { value: "100%", label: "Territoire français couvert" },
+    { value: "20+", label: "Clients grands comptes" },
+  ];
+
   return (
-    <section className="py-32 px-10">
+    <section id="our-goal" className="py-32 px-10">
       <div className="max-w-[1400px] overflow-hidden mx-auto flex flex-col gap-8 ">
         <div className="w-full flex items-end justify-between ">
           <div className="flex flex-col items-start max-w-[700px]">
@@ -19,12 +28,12 @@ export default function OurGoal() {
               défis techniques et environnementaux.
             </p>
           </div>{" "}
-          <button className="mt-3 rounded-3xl bg-[#0B001C] text-white hover:scale-[102%] duration-150 py-2 px-5">
+          <button className="mt-3 rounded-3xl bg-main text-white hover:scale-[102%] duration-150 py-2 px-5">
             Découvrir notre histoire
           </button>
         </div>
 
-        <video
+        {/* <video
           className="mx-auto rounded-xl h-[500px] object-cover"
           width="1400" // Largeur de la vidéo
           height="400" // Hauteur de la vidéo
@@ -35,33 +44,27 @@ export default function OurGoal() {
         >
           <source src="/drone_video.mp4" type="video/mp4" />
           Votre navigateur ne supporte pas la balise vidéo.
-        </video>
+        </video> */}
+        <Image
+          className="w-full mx-auto rounded-xl h-[500px] object-cover"
+          src="https://cdn.pixabay.com/photo/2021/12/11/19/25/map-6863486_1280.jpg"
+          width={1400}
+          height={600}
+          alt=""
+        />
 
-        <div className="flex items-center justify-center gap-4 mx-auto max-w-[1000]">
-          <div className="flex flex-col items-center text-center">
-            <span className="text-xl font-semibold">800</span>
-            <span className="text-black/70">Ha topographiés</span>
-          </div>
-          <div className="w-[1px] h-[40px] bg-black/70"></div>
-          <div className="flex flex-col items-center text-center">
-            <span className="text-xl font-semibold">90%</span>
-            <span className="text-black/70">De nos clients satisfaits</span>
-          </div>{" "}
-          <div className="w-[1px] h-[40px] bg-black/70"></div>
-          <div className="flex flex-col items-center text-center">
-            <span className="text-xl font-semibold">90%</span>
-            <span className="text-black/70">De nos clients satisfaits</span>
-          </div>{" "}
-          <div className="w-[1px] h-[40px] bg-black/70"></div>
-          <div className="flex flex-col items-center text-center">
-            <span className="text-xl font-semibold">90%</span>
-            <span className="text-black/70">De nos clients satisfaits</span>
-          </div>{" "}
-          <div className="w-[1px] h-[40px] bg-black/70"></div>
-          <div className="flex flex-col items-center text-center">
-            <span className="text-xl font-semibold">90%</span>
-            <span className="text-black/70">De nos clients satisfaits</span>
-          </div>
+        <div className="flex items-center justify-center gap-6 mx-auto max-w-[1000]">
+          {stats.map((stat, index) => (
+            <>
+              <div className="flex flex-col items-center text-center">
+                <span className="text-3xl font-semibold">{stat.value}</span>
+                <span className="text-black/70">{stat.label}</span>
+              </div>
+              {index < stats.length - 1 && (
+                <div className="w-[1px] h-[40px] bg-black/70"></div>
+              )}
+            </>
+          ))}
         </div>
       </div>
     </section>

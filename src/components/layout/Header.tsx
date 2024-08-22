@@ -22,8 +22,8 @@ export default function Header() {
   ];
 
   return (
-    <header className="px-10 py-4 z-50 sticky top-0">
-      <nav className="max-w-[1400px] bg-black/30 backdrop-blur-lg text-white px-8 rounded-full overflow-hidden mx-auto py-4 flex items-center justify-between gap-3">
+    <header className="px-10 py-2 z-50 absolute left-0 right-0 top-0 text-white">
+      <nav className="max-w-[1400px] rounded-full overflow-hidden mx-auto py-4 flex items-center justify-between gap-3">
         <span className="text-xl font-bold">intheair</span>
         <div className="flex items-center gap-5 text-sm">
           {links.map((link, index) => (
@@ -31,6 +31,9 @@ export default function Header() {
               {link.name}
             </Link>
           ))}
+          <button className="w-fit rounded-3xl bg-secondary text-white hover:scale-[102%] duration-150 py-2 px-5">
+            Demander une démo
+          </button>
         </div>
       </nav>
     </header>

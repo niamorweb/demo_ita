@@ -60,7 +60,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="py-32 px-10 bg-[#0B001C] text-white">
+    <section className="py-32 px-10 bg-main text-white">
       <div className="max-w-[1400px] mx-auto flex items-start justify-center flex-col gap-14">
         <div className="flex items-end justify-between w-full">
           <div className="flex flex-col items-start gap-3 text-start max-w-[700px]">
