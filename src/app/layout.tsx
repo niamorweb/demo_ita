@@ -17,9 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`bg-white ${bricolage_grotesque.className}`}>
-        {children}
-      </body>
+      <body className={`bg-[#FFF] ${inter.className}`}>{children}</body>
     </html>
   );
 }

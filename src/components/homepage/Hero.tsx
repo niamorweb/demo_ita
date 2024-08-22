@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section className="px-10 min-h-[80vh] pt-10 pb-20 flex items-center justify-center">
       <div className="max-w-[1400px] mx-auto grid grid-cols-2 gap-14">
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-4">
           <h1 className="text-[90px] leading-[90px] font-bold inline-block ">
             Elever l’analyse de{" "}
             <span className="relative inline-flex items-center">
@@ -22,7 +22,7 @@ export default function Hero() {
                 <path
                   className="path"
                   d="M75.0061 21.7943C108.977 12.3173 217.104 -5.86912 322.581 8.08276C399.406 18.2448 480.88 36.3692 482.977 70.6088C485.073 104.848 345.883 126.277 248.504 131.461C151.025 136.651 11.2221 129.643 3.34098 96.0471C-4.54012 62.451 125.847 21.7612 223.244 14.3123C266.714 10.9878 292.155 11.6683 335.135 17.3051"
-                  stroke="#D3F985"
+                  stroke="#EA6E01"
                   stroke-width="6"
                   stroke-linecap="round"
                 />

@@ -1,3 +1,5 @@
+"use client";
+import { useAnimatedCounter } from "@/hooks/useAnimatedCounter";
 import React from "react";
 
 export default function KeysNumbers() {
@@ -46,7 +48,9 @@ export default function KeysNumbers() {
             <section className="w-full h-[600px] grid sm:grid-cols-10 sm:grid-rows-2 rounded-xl gap-5 grid-cols-1 auto-rows-auto">
               <div className="border border-black/70 p-10 flex col-span-5 row-span-1 w-full h-full rounded-xl">
                 <div className="flex flex-col gap-2">
-                  <span className="text-4xl font-bold">5 000</span>
+                  <span className="text-4xl font-bold">
+                    {useAnimatedCounter(5000, 0)}
+                  </span>
                   <span className="text-2xl text-black/70">
                     Ha topographiés
                   </span>
@@ -54,7 +58,9 @@ export default function KeysNumbers() {
               </div>
               <div className="p-10 border border-black/70 col-span-5 row-span-1 w-full h-full rounded-xl">
                 <div className="flex flex-col gap-2">
-                  <span className="text-4xl font-bold">250 +</span>
+                  <span className="text-4xl font-bold">
+                    {useAnimatedCounter(250, 0)} +
+                  </span>
                   <span className="text-2xl text-black/70">
                     Projets réalisés
                   </span>
@@ -62,7 +68,9 @@ export default function KeysNumbers() {
               </div>
               <div className="p-10 border border-black/70 col-span-3 row-span-1 w-full h-full rounded-xl">
                 <div className="flex flex-col gap-2">
-                  <span className="text-4xl font-bold">15 +</span>
+                  <span className="text-4xl font-bold">
+                    {useAnimatedCounter(15, 0)} +
+                  </span>
                   <span className="text-2xl text-black/70">
                     Ingénieurs spécialisés
                   </span>
@@ -70,7 +78,9 @@ export default function KeysNumbers() {
               </div>
               <div className="p-10 flex border border-black/70 col-span-4 row-span-1 w-full h-full rounded-xl">
                 <div className="flex flex-col gap-2">
-                  <span className="text-4xl font-bold">100%</span>
+                  <span className="text-4xl font-bold">
+                    {useAnimatedCounter(100, 0)}%
+                  </span>
                   <span className="text-2xl text-black/70">
                     Du territoire français couvert
                   </span>
@@ -78,7 +88,9 @@ export default function KeysNumbers() {
               </div>
               <div className="p-10 border border-black/70 col-span-3 row-span-1 w-full h-full rounded-xl">
                 <div className="flex flex-col gap-2">
-                  <span className="text-4xl font-bold">20+</span>
+                  <span className="text-4xl font-bold">
+                    {useAnimatedCounter(20, 0)}+
+                  </span>
                   <span className="text-2xl text-black/70">
                     Clients grands comptes
                   </span>

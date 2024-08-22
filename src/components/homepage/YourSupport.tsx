@@ -1,6 +1,81 @@
-import React from "react";
+"use client";
+import React, { useState, useEffect, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
+
+const steps = [
+  {
+    id: 1,
+    title: "Cahier des charges",
+    description: "Étude ou co-création ou CCTP",
+    image: "https://intheair.co/images/home/step-1.png",
+  },
+  {
+    id: 2,
+    title: "Acquisition",
+    description: "Données collectées par drone ou satellite",
+    image: "https://intheair.co/images/home/step-2.png",
+  },
+  {
+    id: 3,
+    title: "Analyse",
+    description: "Traitement intelligent des données",
+    image: "https://intheair.co/images/home/step-3.png",
+  },
+  {
+    id: 4,
+    title: "Visualisation",
+    description: "Livrables accessibles sur notre plateforme dédiée",
+    image: "https://intheair.co/images/home/step-4.png",
+  },
+  {
+    id: 5,
+    title: "Recommandations",
+    description: "Conseils d’optimisation de vos infrastructures",
+    image: "https://intheair.co/images/home/step-5.png",
+  },
+];
 
 export default function YourSupport() {
+  const [visibleSteps, setVisibleSteps] = useState<any>([]);
+
+  const stepRefs = useRef([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const stepIndex = Number(entry.target.getAttribute("data-index"));
+          if (entry.isIntersecting) {
+            //@ts-ignore
+            setVisibleSteps((prev: any) => [...new Set([...prev, stepIndex])]);
+          } else {
+            setVisibleSteps((prev: any) =>
+              prev.filter((index: any) => index !== stepIndex)
+            );
+          }
+        });
+      },
+      {
+        threshold: 0.5, // 50% of the element is visible
+      }
+    );
+
+    stepRefs.current.forEach((ref) => {
+      if (ref) {
+        observer.observe(ref);
+      }
+    });
+
+    return () => {
+      if (stepRefs.current) {
+        stepRefs.current.forEach((ref) => {
+          if (ref) observer.unobserve(ref);
+        });
+      }
+    };
+  }, []);
+
   return (
     <section className="py-20 px-10">
       <div className="max-w-[1400px] mx-auto flex items-center justify-center flex-col gap-8">
@@ -11,35 +86,52 @@ export default function YourSupport() {
           </h2>
           <p>On s'occupe de tout</p>
         </div>
-        <div className="grid w-full max-w-[800px] mx-auto">
-          <div className="border-b border-b-black/70 py-10 w-full">
-            <span className="rounded-full border-[1px] border-black/70 h-[40px] w-[40px] flex items-center justify-center">
-              1
-            </span>
-            <h4 className="font-semibold text-lg">Cahier des charges</h4>
-            <p>Étude ou co-création ou CCTP</p>
-          </div>{" "}
-          <div className="border-b border-b-black/70 py-10 w-full">
-            <span className="rounded-full border-[1px] border-black/70 h-[40px] w-[40px] flex items-center justify-center">
-              1
-            </span>
-            <h4 className="font-semibold text-lg">Cahier des charges</h4>
-            <p>Étude ou co-création ou CCTP</p>
-          </div>{" "}
-          <div className="border-b border-b-black/70 py-10 w-full">
-            <span className="rounded-full border-[1px] border-black/70 h-[40px] w-[40px] flex items-center justify-center">
-              1
-            </span>
-            <h4 className="font-semibold text-lg">Cahier des charges</h4>
-            <p>Étude ou co-création ou CCTP</p>
-          </div>{" "}
-          <div className="border-b border-b-black/70 py-10 w-full">
-            <span className="rounded-full border-[1px] border-black/70 h-[40px] w-[40px] flex items-center justify-center">
-              1
-            </span>
-            <h4 className="font-semibold text-lg">Cahier des charges</h4>
-            <p>Étude ou co-création ou CCTP</p>
-          </div>
+        <div className="w-full max-w-[1000px] mx-auto">
+          {steps.map((step, index) => (
+            <motion.div
+              key={step.id}
+              ref={(el) => (stepRefs.current[index] = el)}
+              className={`border-b border-b-black/70 py-20 w-full flex justify-around items-center ${
+                index % 2 === 0 ? "flex-row " : "flex-row-reverse"
+              }`}
+              data-index={index}
+              initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
+              animate={
+                visibleSteps.includes(index)
+                  ? { opacity: 1, x: 0 }
+                  : { opacity: 0, x: index % 2 === 0 ? -100 : 100 }
+              }
+              transition={{ duration: 0.5 }}
+            >
+              <div className="flex flex-col gap-2">
+                <span className="rounded-full border-[1px] border-black/70 h-[40px] w-[40px] flex items-center justify-center">
+                  {step.id}
+                </span>
+                <h4 className="font-semibold text-lg mt-4">{step.title}</h4>
+                <p className="mt-2">{step.description}</p>
+              </div>
+
+              <motion.div
+                animate={{
+                  translateY: [-10, 10],
+                }}
+                transition={{
+                  repeat: Infinity,
+                  repeatType: "mirror",
+                  duration: 3,
+                  ease: "easeInOut",
+                }}
+              >
+                <Image
+                  className="max-h-[150px] object-contain"
+                  src={step.image}
+                  alt=""
+                  width={200}
+                  height={200}
+                />
+              </motion.div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
