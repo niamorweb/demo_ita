@@ -81,12 +81,12 @@ export default function YourSupport() {
       <div className="max-w-[1400px] mx-auto flex items-start justify-center gap-8 relative">
         <div className="flex flex-col gap-3 sticky top-20">
           <span className="uppercase">Support</span>
-          <h2 className="text-5xl font-semibold">
+          <h2 className="text-5xl font-semibold text-[#0B001C]">
             Votre accompagnement sur-mesure
           </h2>
           <p className=" text-black/70">On s'occupe de tout</p>
 
-          <button className="mt-3 w-fit rounded-3xl bg-black text-white hover:scale-[102%] duration-150 py-3 px-6">
+          <button className="mt-3 w-fit rounded-3xl bg-[#0B001C] text-white hover:scale-[102%] duration-150 py-3 px-6">
             Demander une démo
           </button>
         </div>

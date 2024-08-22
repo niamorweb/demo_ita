@@ -60,14 +60,14 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="py-32 px-10 bg-[#0D002D] text-white">
+    <section className="py-32 px-10 bg-[#0B001C] text-white">
       <div className="max-w-[1400px] mx-auto flex items-start justify-center flex-col gap-14">
         <div className="flex items-end justify-between w-full">
           <div className="flex flex-col items-start gap-3 text-start max-w-[700px]">
             <span className="uppercase text-sm font-extralight">
               Témoignages
             </span>
-            <h2 className="text-5xl font-semibold text-white/70">
+            <h2 className="text-5xl font-semibold text-white">
               Ce sont nos clients qui parlent le mieux de nous
             </h2>
           </div>

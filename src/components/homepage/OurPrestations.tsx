@@ -47,7 +47,9 @@ export default function OurPrestations() {
         <div className="flex items-end justify-between w-full">
           <div className="flex flex-col items-start gap-3 max-w-[600px] ">
             <span className="uppercase">Prestations</span>
-            <h2 className="text-5xl font-semibold">Nos prestations</h2>
+            <h2 className="text-5xl font-semibold text-[#0B001C]">
+              Nos prestations
+            </h2>
             <p className=" text-black/70">
               Études de topographie, thermographie et inspection
               d’infrastructures, analyses de haute précision, suivies de
@@ -129,7 +131,7 @@ export default function OurPrestations() {
         <motion.div className="flex w-full gap-3">
           {data.map((elem, index) => (
             <motion.div
-              className="border border-black/70  rounded-xl w-1/4 duration-300 hover:w-2/6 flex flex-col "
+              className="border border-black/70  rounded-xl w-1/4 duration-300 hover:w-2/6 h-[500px] flex flex-col  overflow-hidden"
               key={index}
             >
               {" "}

@@ -7,7 +7,9 @@ export default function OurGoal() {
         <div className="w-full flex items-end justify-between ">
           <div className="flex flex-col items-start max-w-[700px]">
             <span className="uppercase">Présentation</span>
-            <h2 className="text-5xl font-semibold">Notre objectif</h2>
+            <h2 className="text-5xl font-semibold text-[#0B001C]">
+              Notre objectif
+            </h2>
             <p className="mt-5 text-black/70">
               Intheair rend accessible l'imagerie aérienne en facilitant l'accès
               à la captation de données par drone et satellite, leur analyse
@@ -17,7 +19,7 @@ export default function OurGoal() {
               défis techniques et environnementaux.
             </p>
           </div>{" "}
-          <button className="mt-3 rounded-3xl bg-black text-white hover:scale-[102%] duration-150 py-2 px-5">
+          <button className="mt-3 rounded-3xl bg-[#0B001C] text-white hover:scale-[102%] duration-150 py-2 px-5">
             Découvrir notre histoire
           </button>
         </div>

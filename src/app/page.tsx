@@ -2,6 +2,7 @@ import CallToAction from "@/components/homepage/CallToAction";
 import ExtensiveCoverage from "@/components/homepage/ExtensiveCoverage";
 import Hero from "@/components/homepage/Hero";
 import KeysNumbers from "@/components/homepage/KeysNumbers";
+import OurBlogs from "@/components/homepage/OurBlogs";
 import OurGoal from "@/components/homepage/OurGoal";
 import OurPrestations from "@/components/homepage/OurPrestations";
 import Testimonials from "@/components/homepage/Testimonials";
@@ -14,17 +15,18 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="relative">
-      <Header />
+      {/* <Header /> */}
       <Hero />
       {/* <TheyTrustUs /> */}
       <OurGoal />
       <OurPrestations />
       <YourSupport />
       <ExtensiveCoverage />
+      <OurBlogs />
       {/* <KeysNumbers /> */}
       <Testimonials />
       <CallToAction />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

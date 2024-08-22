@@ -10,7 +10,7 @@ export default function ExtensiveCoverage() {
         <div className="flex flex-col gap-14 max-w-[1000px]">
           <div className="flex flex-col gap-3">
             <span className="uppercase">Couverture étendue</span>
-            <h2 className="text-5xl font-semibold">
+            <h2 className="text-5xl font-semibold text-[#0B001C]">
               Large couverture du territoire français et à l’international
             </h2>
           </div>

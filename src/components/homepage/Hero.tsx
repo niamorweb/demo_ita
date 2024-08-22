@@ -8,7 +8,7 @@ export default function Hero() {
     <section className="px-10 min-h-n[80vh] pt-10 pb-20 flex items-center justify-center">
       <div className="max-w-[1400px] overflow-hidden mx-auto grid grid-cols-2 gap-14">
         <div className="flex flex-col gap-4">
-          <h1 className="text-[90px] leading-[90px] font-bold inline-block ">
+          <h1 className="text-[90px] leading-[90px] font-bold inline-block text-[#0B001C]">
             Elever l’analyse de{" "}
             <span className="relative inline-flex items-center">
               <svg
@@ -38,7 +38,7 @@ export default function Hero() {
             permettant de gérer efficacement et durablement vos infrastructures.
           </p>
           <div className="flex items-center gap-3 mt-3">
-            <button className="rounded-3xl bg-black text-white hover:scale-[102%] duration-150 py-3 px-6">
+            <button className="rounded-3xl bg-[#0B001C] text-white hover:scale-[102%] duration-150 py-3 px-6">
               Etre rappelé
             </button>
             <button className="rounded-3xl bg-orange-500 text-white hover:scale-[102%] duration-150 py-3 px-6">
