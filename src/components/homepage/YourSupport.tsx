@@ -90,6 +90,7 @@ export default function YourSupport() {
           {steps.map((step, index) => (
             <motion.div
               key={step.id}
+              //@ts-ignore
               ref={(el) => (stepRefs.current[index] = el)}
               className={`border-b border-b-black/70 py-20 w-full flex justify-around items-center ${
                 index % 2 === 0 ? "flex-row " : "flex-row-reverse"
