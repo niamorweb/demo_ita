@@ -100,7 +100,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="py-32 px-10 bg-main text-white">
+    <section className="py-32 px-10 bg-mainDark text-white rounded-br-[40px] rounded-bl-[40px]">
       <div className="max-w-[1400px] mx-auto flex items-start justify-center flex-col gap-14">
         <div className="flex items-end justify-between w-full">
           <div className="flex flex-col items-start gap-3 text-start max-w-[700px]">
@@ -137,8 +137,8 @@ export default function Testimonials() {
               <ReviewCard key={review.name} {...review} />
             ))}
           </Marquee>
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-main dark:from-background"></div>
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-main dark:from-background"></div>
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-mainDark dark:from-background"></div>
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-mainDark dark:from-background"></div>
         </div>
         {/* <ArrowRight
             onClick={nextTestimonial}

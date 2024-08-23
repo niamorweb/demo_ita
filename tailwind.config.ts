@@ -37,6 +37,7 @@ const config: Config = {
       },
       colors: {
         main: "#0341b2",
+        mainDark: "#08155A",
         secondary: "#f97216",
       },
     },

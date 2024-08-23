@@ -1,6 +1,9 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useRef } from "react";
 import NumberTicker from "../magicui/number-ticket";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { ChevronRight } from "lucide-react";
 
 export default function OurGoal() {
   const stats = [
@@ -11,16 +14,20 @@ export default function OurGoal() {
     { value: 20, label: "Clients grands comptes" },
   ];
 
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({ target: ref });
+  const y = useTransform(scrollYProgress, [0, 1], [0, -50]); // Translation Y
+
   return (
-    <section id="our-goal" className="py-32 px-10">
-      <div className="max-w-[1400px] overflow-hidden mx-auto flex flex-col gap-8 ">
-        <div className="w-full flex items-end justify-between ">
-          <div className="flex flex-col items-start max-w-[700px]">
+    <section id="our-goal" className="py-32 px-10 bg-blue-50">
+      <div className="max-w-[1400px] overflow-hidden mx-auto flex flex-col gap-20 ">
+        <div className="w-full flex flex-col items-center justify-center ">
+          <div className="flex flex-col items-center mx-auto text-center justify-center max-w-[700px]">
             <span className="uppercase">Présentation</span>
             <h2 className="text-5xl font-semibold text-[#0B001C]">
               Notre objectif
             </h2>
-            <p className="mt-5 text-black/70">
+            <p className="mt-5 text-black/70 text-center">
               Intheair rend accessible l'imagerie aérienne en facilitant l'accès
               à la captation de données par drone et satellite, leur analyse
               immédiate, suivies de recommandations concrètes. Startup
@@ -29,30 +36,22 @@ export default function OurGoal() {
               défis techniques et environnementaux.
             </p>
           </div>{" "}
-          <button className="mt-3 rounded-3xl bg-main text-white hover:scale-[102%] duration-150 py-2 px-5">
-            Découvrir notre histoire
-          </button>
         </div>
 
-        {/* <video
-          className="mx-auto rounded-xl h-[500px] object-cover"
-          width="1400" // Largeur de la vidéo
-          height="400" // Hauteur de la vidéo
-          // controls // Affiche les contrôles de lecture (play, pause, volume, etc.)
-          autoPlay // Joue la vidéo automatiquement (optionnel)
-          loop // Redémarre la vidéo après la fin (optionnel)
-          muted // Démarre la vidéo sans son (optionnel)
-        >
-          <source src="/drone_video.mp4" type="video/mp4" />
-          Votre navigateur ne supporte pas la balise vidéo.
-        </video> */}
-        <Image
-          className="w-full mx-auto rounded-xl h-[500px] object-cover"
-          src="https://cdn.pixabay.com/photo/2021/12/11/19/25/map-6863486_1280.jpg"
-          width={1400}
-          height={600}
-          alt=""
-        />
+        <div className="flex items-center gap-5 ">
+          <motion.img
+            style={{ y }} // Applique la translation en Y
+            className="mx-auto rounded-xl w-1/2 h-[500px] object-cover"
+            src="https://cdn.pixabay.com/photo/2021/12/11/19/25/map-6863486_1280.jpg"
+            alt=""
+          />
+          <motion.img
+            style={{ y }} // Applique la translation en Y
+            className="mx-auto rounded-xl w-1/2 h-[500px] object-cover"
+            src="https://cdn.pixabay.com/photo/2021/12/11/19/25/map-6863486_1280.jpg"
+            alt=""
+          />
+        </div>
 
         <div className="flex items-center justify-center gap-6 mx-auto max-w-[1000]">
           {stats.map((stat, index) => (
@@ -69,6 +68,10 @@ export default function OurGoal() {
             </>
           ))}
         </div>
+        <button className="mt-3 flex items-center mx-auto hover:underline underline-offset-2 text-main gap-2 hover:gap-3 duration-150">
+          Découvrir notre histoire
+          <ChevronRight className="w-4 h-4" />
+        </button>
       </div>
     </section>
   );

@@ -72,7 +72,7 @@ export default function Hero() {
               Etre rappelé
             </button> */}
             <Link
-              href="/#our-goal"
+              href="/#intro"
               className="cursor-pointer rounded-3xl border border-white text-white hover:scale-[102%] duration-150 py-2 px-5"
             >
               Découvrir nos solution

@@ -35,10 +35,10 @@ export default function OurBlogs() {
   ];
 
   return (
-    <section className="py-32 px-10">
+    <section className="py-32 px-10 bg-blue-50">
       <div className="max-w-[1400px] mx-auto flex justify-center flex-col gap-16">
-        <div className="flex items-end justify-between w-full">
-          <div className="flex flex-col items-start gap-3 max-w-[600px] ">
+        <div className="flex flex-col items-center justify-center text-center w-full">
+          <div className="flex flex-col items-center gap-3 max-w-[600px] ">
             <span className="uppercase">Articles</span>
             <h2 className="text-5xl font-semibold text-[#0B001C]">
               Notre blog
@@ -49,9 +49,10 @@ export default function OurBlogs() {
               recommandations concrètes
             </p>
           </div>
-          <button className="mt-3 w-fit rounded-3xl bg-main text-white hover:scale-[102%] duration-150 py-3 px-6">
-            Voir tous les articles
-          </button>{" "}
+          <button className="mt-3 flex items-center mx-auto hover:underline underline-offset-2 text-main gap-2 hover:gap-3 duration-150">
+            Découvrir notre histoire
+            <ChevronRight className="w-4 h-4" />
+          </button>
         </div>
         <div className="grid grid-cols-4 gap-4">
           {data.map((elem, index) => (
