@@ -72,14 +72,18 @@ export default function Testimonials() {
             </h2>
           </div>
           <div className="flex items-center gap-3">
-            <ArrowLeft
-              onClick={prevTestimonial}
-              className="cursor-pointer text-2xl"
-            />
-            <ArrowRight
-              onClick={prevTestimonial}
-              className="cursor-pointer text-2xl"
-            />
+            <button className="w-[40px] h-[40px] rounded-full flex items-center justify-center bg-white text-main">
+              <ArrowLeft
+                onClick={prevTestimonial}
+                className="cursor-pointer text-2xl"
+              />
+            </button>
+            <button className="w-[40px] h-[40px] rounded-full flex items-center justify-center bg-white text-main">
+              <ArrowRight
+                onClick={prevTestimonial}
+                className="cursor-pointer text-2xl"
+              />
+            </button>
           </div>
         </div>
         <div className="flex items-center gap-4 relative">
@@ -95,7 +99,7 @@ export default function Testimonials() {
                 .map((testimonial, index) => (
                   <motion.div
                     key={testimonial.id}
-                    className="flex-shrink-0 flex flex-col border border-white/70 rounded-xl p-6 gap-4 max-w-[350px] text-sm"
+                    className="flex-shrink-0 flex flex-col bg-white shadow-md text-black/70 rounded-xl p-6 gap-4 max-w-[350px] text-sm"
                   >
                     <Image
                       className="w-[50px] h-[50px] rounded-full object-cover"

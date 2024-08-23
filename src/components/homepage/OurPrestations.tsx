@@ -131,7 +131,10 @@ export default function OurPrestations() {
         <motion.div className="flex w-full gap-3">
           {data.map((elem, index) => (
             <motion.div
-              className="border border-black/70  rounded-xl w-1/4 duration-300 hover:w-2/6 h-[500px] flex flex-col  overflow-hidden"
+              initial={{ filter: "blur(2px)" }}
+              whileInView={{ filter: "blur(0)" }}
+              viewport={{ once: true }}
+              className=" bg-white shadow-md rounded-xl w-1/4 duration-300 hover:w-2/6 h-[500px] flex flex-col  overflow-hidden"
               key={index}
             >
               {" "}

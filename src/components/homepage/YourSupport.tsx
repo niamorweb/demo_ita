@@ -86,17 +86,17 @@ export default function YourSupport() {
           </h2>
           <p className=" text-black/70">On s'occupe de tout</p>
 
-          <button className="mt-3 w-fit rounded-3xl bg-main text-white hover:scale-[102%] duration-150 py-3 px-6">
+          <button className="mt-3 w-fit rounded-3xl bg-main text-white hover:scale-[102%] duration-150 py-2 px-5">
             Demander une démo
           </button>
         </div>
-        <div className="w-full max-w-[1000px] mx-auto overflow-hidden">
+        <div className="w-full max-w-[1000px] mx-auto overflow-hidden grid gap-4">
           {steps.map((step, index) => (
             <motion.div
               key={step.id}
               //@ts-ignore
               ref={(el) => (stepRefs.current[index] = el)}
-              className={`border-b border-b-black/70 py-20 w-full flex justify-around items-center ${
+              className={`bg-white shadow-md rounded-lg py-20 w-full flex justify-around items-center ${
                 index % 2 === 0 ? "flex-row " : "flex-row-reverse"
               }`}
               data-index={index}

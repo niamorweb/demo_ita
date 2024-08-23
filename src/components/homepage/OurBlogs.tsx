@@ -55,7 +55,7 @@ export default function OurBlogs() {
         <div className="grid grid-cols-4 gap-4">
           {data.map((elem, index) => (
             <div
-              className="border border-black/70  rounded-xl flex flex-col overflow-hidden"
+              className="bg-white shadow-md rounded-xl flex flex-col overflow-hidden"
               key={index}
             >
               {" "}
