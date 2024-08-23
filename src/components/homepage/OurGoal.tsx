@@ -1,13 +1,14 @@
 import Image from "next/image";
 import React from "react";
+import NumberTicker from "../magicui/number-ticket";
 
 export default function OurGoal() {
   const stats = [
-    { value: "800", label: "Ha topographiés" },
-    { value: "250+", label: "Projets réalisés" },
-    { value: "15+", label: "Ingénieurs spécialisés" },
-    { value: "100%", label: "Territoire français couvert" },
-    { value: "20+", label: "Clients grands comptes" },
+    { value: 800, label: "Ha topographiés" },
+    { value: 250, label: "Projets réalisés" },
+    { value: 15, label: "Ingénieurs spécialisés" },
+    { value: 100, label: "Territoire français couvert" },
+    { value: 20, label: "Clients grands comptes" },
   ];
 
   return (
@@ -57,7 +58,9 @@ export default function OurGoal() {
           {stats.map((stat, index) => (
             <>
               <div className="flex flex-col items-center text-center">
-                <span className="text-3xl font-semibold">{stat.value}</span>
+                <span className="text-3xl font-semibold">
+                  <NumberTicker value={stat.value} />
+                </span>
                 <span className="text-black/70">{stat.label}</span>
               </div>
               {index < stats.length - 1 && (

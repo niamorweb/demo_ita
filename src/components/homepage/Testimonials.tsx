@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import randomImage from "@/assets/prestations_img_2.png";
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import { cn } from "@/utils/cn";
+import Marquee from "../magicui/marquee";
 
 const testimonials = [
   {
@@ -48,6 +50,44 @@ const testimonials = [
   },
 ];
 
+const firstRow = testimonials.slice(0, testimonials.length / 2);
+const secondRow = testimonials.slice(testimonials.length / 2);
+
+const ReviewCard = ({
+  image,
+  name,
+  title,
+  feedback,
+}: {
+  image: any;
+  name: string;
+  title: string;
+  feedback: string;
+}) => {
+  return (
+    <figure
+      className={cn("relative w-64 overflow-hidden rounded-xl border p-4")}
+    >
+      <div className="flex flex-row items-center gap-2">
+        <Image
+          className="rounded-full"
+          width={32}
+          height={32}
+          alt=""
+          src={image}
+        />
+        <div className="flex flex-col">
+          <figcaption className="text-sm font-medium dark:text-white">
+            {name}
+          </figcaption>
+          <p className="text-xs font-medium dark:text-white/40">{title}</p>
+        </div>
+      </div>
+      <blockquote className="mt-2 text-sm">{feedback}</blockquote>
+    </figure>
+  );
+};
+
 export default function Testimonials() {
   const [current, setCurrent] = useState(0);
 
@@ -71,7 +111,7 @@ export default function Testimonials() {
               Ce sont nos clients qui parlent le mieux de nous
             </h2>
           </div>
-          <div className="flex items-center gap-3">
+          {/* <div className="flex items-center gap-3">
             <button className="w-[40px] h-[40px] rounded-full flex items-center justify-center bg-white text-main">
               <ArrowLeft
                 onClick={prevTestimonial}
@@ -84,44 +124,26 @@ export default function Testimonials() {
                 className="cursor-pointer text-2xl"
               />
             </button>
-          </div>
+          </div> */}
         </div>
-        <div className="flex items-center gap-4 relative">
-          <div className="overflow-hidden w-full">
-            <motion.div
-              className="flex gap-4"
-              initial={{ x: 0 }}
-              animate={{ x: `-${current * (100 / 3)}%` }}
-              transition={{ duration: 0.5 }}
-            >
-              {testimonials
-                .slice(current, current + 3)
-                .map((testimonial, index) => (
-                  <motion.div
-                    key={testimonial.id}
-                    className="flex-shrink-0 flex flex-col bg-white shadow-md text-black/70 rounded-xl p-6 gap-4 max-w-[350px] text-sm"
-                  >
-                    <Image
-                      className="w-[50px] h-[50px] rounded-full object-cover"
-                      src={testimonial.image}
-                      width={50}
-                      height={50}
-                      alt={testimonial.name}
-                    />
-                    <p className="">{testimonial.feedback}</p>
-                    <div className="flex flex-col gap-2">
-                      <p>{testimonial.name}</p>
-                      <p>{testimonial.title}</p>
-                    </div>
-                  </motion.div>
-                ))}
-            </motion.div>
-          </div>
-          {/* <ArrowRight
+        <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden">
+          <Marquee pauseOnHover className="[--duration:20s]">
+            {firstRow.map((review) => (
+              <ReviewCard key={review.name} {...review} />
+            ))}
+          </Marquee>
+          <Marquee reverse pauseOnHover className="[--duration:20s]">
+            {secondRow.map((review) => (
+              <ReviewCard key={review.name} {...review} />
+            ))}
+          </Marquee>
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-main dark:from-background"></div>
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-main dark:from-background"></div>
+        </div>
+        {/* <ArrowRight
             onClick={nextTestimonial}
             className="absolute right-[-50px] cursor-pointer text-2xl"
           /> */}
-        </div>
       </div>
     </section>
   );

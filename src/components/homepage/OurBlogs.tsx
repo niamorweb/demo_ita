@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { div } from "three/examples/jsm/nodes/Nodes.js";
+import BackgroundChanger from "../changebg";
 
 export default function OurBlogs() {
   const data = [
