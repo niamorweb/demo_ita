@@ -46,7 +46,7 @@ export default function OurGoal() {
   );
 
   return (
-    <section id="our-goal bg-[#F4F0EE]" ref={ref} className="py-32 px-10 ">
+    <section id="our-goal" ref={ref} className="py-32 px-10 bg-[#F4F0EE]">
       <div className="max-w-[1400px] overflow-hidden mx-auto flex flex-col gap-4 ">
         <div className="w-full flex flex-col items-center justify-center ">
           <div className="flex flex-col items-center mx-auto text-center justify-center max-w-[900px]">
