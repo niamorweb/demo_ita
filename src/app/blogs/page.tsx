@@ -1,5 +1,5 @@
 import { article } from "@/data/article";
-import { ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -42,6 +42,14 @@ export default function page() {
               </div>
             </div>
           ))}
+        </div>
+        <div className="flex items-center gap-4 mx-auto text-black/70">
+          <button className="border border-black/70 flex items-center justify-center rounded-full h-10 w-10">
+            <ChevronLeft />
+          </button>
+          <button className="border border-black/70 flex items-center justify-center rounded-full h-10 w-10">
+            <ChevronRight />
+          </button>
         </div>
       </div>
     </div>

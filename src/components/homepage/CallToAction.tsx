@@ -2,7 +2,7 @@ import React from "react";
 
 export default function CallToAction() {
   return (
-    <section className="py-32 px-10">
+    <section className="py-32 px-10 bg-main text-white">
       <div className="max-w-[1200px] overflow-hidden mx-auto flex items-center justify-center flex-col gap-8">
         <div className="flex flex-col items-center gap-3 text-center">
           <span className="uppercase">Support</span>

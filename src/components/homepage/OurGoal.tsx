@@ -19,8 +19,8 @@ export default function OurGoal() {
   const y = useTransform(scrollYProgress, [0, 1], [0, -50]); // Translation Y
 
   return (
-    <section id="our-goal" className="py-32 px-10 bg-blue-50">
-      <div className="max-w-[1400px] overflow-hidden mx-auto flex flex-col gap-20 ">
+    <section id="our-goal" className="py-32 px-10 ">
+      <div className="max-w-[1400px] overflow-hidden mx-auto flex flex-col gap-4 ">
         <div className="w-full flex flex-col items-center justify-center ">
           <div className="flex flex-col items-center mx-auto text-center justify-center max-w-[700px]">
             <span className="uppercase">Présentation</span>
@@ -38,7 +38,7 @@ export default function OurGoal() {
           </div>{" "}
         </div>
 
-        <div className="flex items-center gap-5 ">
+        <div className="flex items-center gap-5 mt-16">
           <motion.img
             style={{ y }} // Applique la translation en Y
             className="mx-auto rounded-xl w-1/2 h-[500px] object-cover"
@@ -68,7 +68,7 @@ export default function OurGoal() {
             </>
           ))}
         </div>
-        <button className="mt-3 flex items-center mx-auto hover:underline underline-offset-2 text-main gap-2 hover:gap-3 duration-150">
+        <button className="mt-6 flex items-center mx-auto hover:underline underline-offset-2 text-main gap-2 hover:gap-3 duration-150">
           Découvrir notre histoire
           <ChevronRight className="w-4 h-4" />
         </button>

@@ -29,7 +29,7 @@ export default function Home() {
       start: "top 20%",
       end: "bottom 0%",
       onEnter: () => {
-        gsap.to(".section-two", { duration: 1.0, backgroundColor: "#F7F7F8" });
+        gsap.to(".section-two", { duration: 1.0, backgroundColor: "#fff" });
       },
       onLeaveBack: () => {
         gsap.to(".section-two", { duration: 1.0, backgroundColor: "#000000" });
@@ -46,9 +46,14 @@ export default function Home() {
       <section id="intro" className="section-two bg-[#000000]">
         <div className="z-10 flex min-h-[42rem] items-center justify-center rounded-lg">
           <TextRevealByWord
-            text="Intheair rend accessible l'imagerie aérienne en facilitant l'accès
-              à la captation de données par drone et satellite, leur analyse
+            text="Intheair rend accessible l'imagerie aérienne🛰 en facilitant l'accès
+              à la captation de données par drone et satellite 🛰️, leur analyse
               immédiate, suivies de recommandations concrètes.."
+            coloredWords={[
+              "l'imagerie aérienne",
+              "données par drone",
+              "analyse",
+            ]}
           />
         </div>
       </section>

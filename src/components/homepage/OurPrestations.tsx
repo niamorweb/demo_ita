@@ -53,7 +53,7 @@ export default function OurPrestations() {
   ));
 
   return (
-    <section className="py-32 px-10">
+    <section className="py-32 px-10 bg-gradient-to-b from-white to-blue-50">
       <div className="max-w-[1400px] mx-auto flex justify-center flex-col">
         <div className="flex items-end justify-between w-full">
           <div className="flex flex-col items-center text-center mx-auto gap-3 max-w-[600px] ">

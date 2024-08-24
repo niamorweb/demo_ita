@@ -49,7 +49,7 @@ const logos = [
 
 export default function ExtensiveCoverage() {
   return (
-    <section className="py-32 px-10">
+    <section className="py-32 px-10 bg-gradient-to-b from-blue-50 via-white to-blue-50">
       <div className="max-w-[1400px] overflow-hidden mx-auto flex flex-col gap-12 items-center text-center">
         <div className="flex flex-col gap-14 max-w-[1000px]">
           <div className="flex flex-col gap-3">
