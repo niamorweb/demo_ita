@@ -53,21 +53,23 @@ export default function OurPrestations() {
   ));
 
   return (
-    <section className="py-32 px-10 bg-gradient-to-b from-white to-blue-50">
+    <section className="py-32 px-10 bg-gradient-to-b">
       <div className="max-w-[1400px] mx-auto flex justify-center flex-col">
         <div className="flex items-end justify-between w-full">
           <div className="flex flex-col items-center text-center mx-auto gap-3 max-w-[600px] ">
-            <span className="uppercase font-thin text-sm lg:text-base">
-              Prestations
-            </span>
-            <h2 className="text-3xl lg:text-5xl font-semibold text-[#0B001C]">
-              Nos prestations
-            </h2>
-            <p className=" text-black/70">
-              Études de topographie, thermographie et inspection
-              d’infrastructures, analyses de haute précision, suivies de
-              recommandations concrètes
-            </p>
+            <div className="flex flex-col items-center gap-3 max-w-[700px] ">
+              <span className="bg-mainDark text-white text-xs rounded-full py-1 px-4 mb-3">
+                Prestations
+              </span>
+              <h2 className="text-xl lg:text-3xl font-semibold text-[#0B001C]">
+                Toutes nos prestations
+              </h2>
+              <p className=" text-black/70 text-center">
+                Études de topographie, thermographie et inspection
+                d’infrastructures, analyses de haute précision, suivies de
+                recommandations concrètes
+              </p>
+            </div>
           </div>{" "}
         </div>
         <Carousel items={cards} />

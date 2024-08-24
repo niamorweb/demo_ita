@@ -35,42 +35,43 @@ export default function OurBlogs() {
   ];
 
   return (
-    <section className="py-32 px-10 bg-blue-50">
+    <section className="py-48 px-10 bg-[#F4F0EE]">
       <div className="max-w-[1400px] mx-auto flex justify-center flex-col gap-16">
         <div className="flex flex-col items-center justify-center text-center w-full">
-          <div className="flex flex-col items-center gap-3 max-w-[600px] ">
-            <span className="uppercase">Articles</span>
-            <h2 className="text-5xl font-semibold text-[#0B001C]">
-              Notre blog
+          <div className="flex flex-col items-center gap-3 max-w-[700px] ">
+            <span className="bg-mainDark text-white text-xs rounded-full py-1 px-4 mb-3">
+              Blog
+            </span>
+            <h2 className="text-xl lg:text-3xl font-semibold text-[#0B001C]">
+              Découvrez notre blog
             </h2>
-            <p className=" text-black/70">
+            <p className=" text-black/70 text-center">
               Études de topographie, thermographie et inspection
               d’infrastructures, analyses de haute précision, suivies de
               recommandations concrètes
             </p>
           </div>
           <button className="mt-3 flex items-center mx-auto hover:underline underline-offset-2 text-main gap-2 hover:gap-3 duration-150">
-            Découvrir notre histoire
+            Voir tous les articles
             <ChevronRight className="w-4 h-4" />
           </button>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
           {data.map((elem, index) => (
             <div
-              className="bg-white shadow-md rounded-xl flex flex-col overflow-hidden"
+              className="bg-white shadow-md rounded-xl flex flex-col gap-3 overflow-hidden p-2"
               key={index}
             >
               {" "}
               <Image
-                className="w-full duration-300 object-cover flex-1 max-h-[200px]"
+                className="w-full rounded-lg duration-300 object-cover flex-1 max-h-[200px]"
                 src={elem.img}
                 width={500}
                 height={500}
                 alt=""
               />
-              <div className="flex flex-col justify-between p-4 gap-6 h-full max-w-[400px]">
+              <div className="flex flex-col justify-between p-2 gap-6 h-full max-w-[400px]">
                 <div className="flex flex-col gap-3">
-                  <p className="text-sm text-black/70">Lecture: 3 min</p>
                   <h4 className="text-xl">{elem.title}</h4>
                   <p className="text-sm text-black/70">{elem.description}</p>
                 </div>{" "}

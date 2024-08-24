@@ -92,16 +92,20 @@ const ReviewCard = ({
 
 export default function Testimonials() {
   return (
-    <section className="py-32 px-10 bg-main text-white">
+    <section className="py-32 px-10 bg-[#F4F0EE] text-black">
       <div className="max-w-[1400px] mx-auto flex items-start justify-center flex-col gap-14">
         <div className="flex items-end justify-between w-full">
-          <div className="flex flex-col items-start gap-3 text-start max-w-[700px]">
-            <span className="uppercase text-sm font-extralight lg:text-base">
+          <div className="flex flex-col items-center mx-auto text-center justify-center max-w-[900px]">
+            <span className="bg-mainDark text-white text-xs rounded-full py-1 px-4 mb-3">
               Témoignages
             </span>
-            <h2 className="text-3xl lg:text-5xl font-semibold text-white">
+            <h2 className="text-xl lg:text-3xl font-semibold text-[#0B001C]">
               Ce sont nos clients qui parlent le mieux de nous
             </h2>
+            <p className="mt-5 text-black/70 text-center">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime
+              vel eius nesciunt natus perspiciatis?
+            </p>
           </div>
         </div>
         <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden">
@@ -115,8 +119,8 @@ export default function Testimonials() {
               <ReviewCard key={review.name} {...review} />
             ))}
           </Marquee>
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-main dark:from-background"></div>
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-main dark:from-background"></div>
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-[#F4F0EE] dark:from-background"></div>
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-[#F4F0EE] dark:from-background"></div>
         </div>
       </div>
     </section>
