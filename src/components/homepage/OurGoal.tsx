@@ -23,8 +23,10 @@ export default function OurGoal() {
       <div className="max-w-[1400px] overflow-hidden mx-auto flex flex-col gap-4 ">
         <div className="w-full flex flex-col items-center justify-center ">
           <div className="flex flex-col items-center mx-auto text-center justify-center max-w-[700px]">
-            <span className="uppercase">Présentation</span>
-            <h2 className="text-5xl font-semibold text-[#0B001C]">
+            <span className="uppercase font-thin text-sm lg:text-base">
+              Présentation
+            </span>
+            <h2 className="text-3xl lg:text-5xl font-semibold text-[#0B001C]">
               Notre objectif
             </h2>
             <p className="mt-5 text-black/70 text-center">
@@ -38,16 +40,16 @@ export default function OurGoal() {
           </div>{" "}
         </div>
 
-        <div className="flex items-center gap-5 mt-16">
+        <div className="flex flex-col lg:flex-row items-center gap-5 mt-16">
           <motion.img
             style={{ y }} // Applique la translation en Y
-            className="mx-auto rounded-xl w-1/2 h-[500px] object-cover"
+            className="mx-auto rounded-xl lg:w-1/2 lg:h-[500px] object-cover"
             src="https://cdn.pixabay.com/photo/2021/12/11/19/25/map-6863486_1280.jpg"
             alt=""
           />
           <motion.img
             style={{ y }} // Applique la translation en Y
-            className="mx-auto rounded-xl w-1/2 h-[500px] object-cover"
+            className="mx-auto rounded-xl lg:w-1/2 lg:h-[500px] object-cover"
             src="https://cdn.pixabay.com/photo/2021/12/11/19/25/map-6863486_1280.jpg"
             alt=""
           />
@@ -57,10 +59,12 @@ export default function OurGoal() {
           {stats.map((stat, index) => (
             <>
               <div className="flex flex-col items-center text-center">
-                <span className="text-3xl font-semibold">
+                <span className="text-lg lg:text-3xl font-semibold">
                   <NumberTicker value={stat.value} />
                 </span>
-                <span className="text-black/70">{stat.label}</span>
+                <span className="text-xs lg:text-base text-black/70">
+                  {stat.label}
+                </span>
               </div>
               {index < stats.length - 1 && (
                 <div className="w-[1px] h-[40px] bg-black/70"></div>

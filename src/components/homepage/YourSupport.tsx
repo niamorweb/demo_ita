@@ -68,13 +68,15 @@ export default function YourSupport() {
     <section className="py-32 px-10 bg-blue-50">
       <div className="max-w-[1400px] mx-auto flex flex-col items-start justify-start gap-20 relative">
         <div className="flex flex-col gap-3 max-w-[700px] mx-auto items-center text-center">
-          <span className="uppercase">Support</span>
-          <h2 className="text-5xl font-semibold text-[#0B001C]">
+          <span className="uppercase font-thin text-sm lg:text-base">
+            Support
+          </span>
+          <h2 className="text-3xl lg:text-5xl font-semibold text-[#0B001C]">
             Votre accompagnement sur-mesure
           </h2>
           <p className=" text-black/70">On s'occupe de tout</p>
         </div>
-        <div className="grid grid-cols-4 gap-3">
+        <div className="grid md:grid-cols-2  lg:grid-cols-4 gap-3">
           {steps.map((elem, index) => (
             <div
               className="text-center bg-mainDark rounded-2xl text-white flex flex-col items-center justify-center p-12"

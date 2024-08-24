@@ -83,48 +83,26 @@ const ReviewCard = ({
           <p className="text-xs font-medium">{title}</p>
         </div>
       </div>
-      <blockquote className="mt-2 text-sm text-black/70">{feedback}</blockquote>
+      <blockquote className="mt-2  text-xs lg:text-sm text-black/70">
+        {feedback}
+      </blockquote>
     </figure>
   );
 };
 
 export default function Testimonials() {
-  const [current, setCurrent] = useState(0);
-
-  const nextTestimonial = () => {
-    setCurrent((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
-  };
-
-  const prevTestimonial = () => {
-    setCurrent((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
-  };
-
   return (
     <section className="py-32 px-10 bg-main text-white">
       <div className="max-w-[1400px] mx-auto flex items-start justify-center flex-col gap-14">
         <div className="flex items-end justify-between w-full">
           <div className="flex flex-col items-start gap-3 text-start max-w-[700px]">
-            <span className="uppercase text-sm font-extralight">
+            <span className="uppercase text-sm font-extralight lg:text-base">
               Témoignages
             </span>
-            <h2 className="text-5xl font-semibold text-white">
+            <h2 className="text-3xl lg:text-5xl font-semibold text-white">
               Ce sont nos clients qui parlent le mieux de nous
             </h2>
           </div>
-          {/* <div className="flex items-center gap-3">
-            <button className="w-[40px] h-[40px] rounded-full flex items-center justify-center bg-white text-main">
-              <ArrowLeft
-                onClick={prevTestimonial}
-                className="cursor-pointer text-2xl"
-              />
-            </button>
-            <button className="w-[40px] h-[40px] rounded-full flex items-center justify-center bg-white text-main">
-              <ArrowRight
-                onClick={prevTestimonial}
-                className="cursor-pointer text-2xl"
-              />
-            </button>
-          </div> */}
         </div>
         <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden">
           <Marquee pauseOnHover className="[--duration:20s]">
@@ -140,10 +118,6 @@ export default function Testimonials() {
           <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-main dark:from-background"></div>
           <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-main dark:from-background"></div>
         </div>
-        {/* <ArrowRight
-            onClick={nextTestimonial}
-            className="absolute right-[-50px] cursor-pointer text-2xl"
-          /> */}
       </div>
     </section>
   );

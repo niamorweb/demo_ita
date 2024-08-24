@@ -5,12 +5,12 @@ export default function CallToAction() {
     <section className="py-32 px-10 bg-main text-white">
       <div className="max-w-[1200px] overflow-hidden mx-auto flex items-center justify-center flex-col gap-8">
         <div className="flex flex-col items-center gap-3 text-center">
-          <span className="uppercase">Support</span>
-          <h2 className="text-5xl font-semibold">
-            Votre accompagnement sur-mesure
-          </h2>
+          <span className="uppercase font-extralight text-sm lg:text-base">
+            projet
+          </span>
+          <h2 className="text-3xl lg:text-5xl font-semibold">Un projet ?</h2>
           <p>On s'occupe de tout</p>
-          <button className="mt-3 rounded-3xl bg-white text-main hover:scale-[102%] duration-150 py-3 px-6">
+          <button className="mt-3 rounded-3xl bg-white text-main hover:scale-[102%] duration-150 py-2 px-5">
             Discutons-en
           </button>
         </div>

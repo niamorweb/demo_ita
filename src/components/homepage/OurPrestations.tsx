@@ -57,8 +57,10 @@ export default function OurPrestations() {
       <div className="max-w-[1400px] mx-auto flex justify-center flex-col">
         <div className="flex items-end justify-between w-full">
           <div className="flex flex-col items-center text-center mx-auto gap-3 max-w-[600px] ">
-            <span className="uppercase">Prestations</span>
-            <h2 className="text-5xl font-semibold text-[#0B001C]">
+            <span className="uppercase font-thin text-sm lg:text-base">
+              Prestations
+            </span>
+            <h2 className="text-3xl lg:text-5xl font-semibold text-[#0B001C]">
               Nos prestations
             </h2>
             <p className=" text-black/70">

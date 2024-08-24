@@ -53,12 +53,14 @@ export default function ExtensiveCoverage() {
       <div className="max-w-[1400px] overflow-hidden mx-auto flex flex-col gap-12 items-center text-center">
         <div className="flex flex-col gap-14 max-w-[1000px]">
           <div className="flex flex-col gap-3">
-            <span className="uppercase">Couverture étendue</span>
-            <h2 className="text-5xl font-semibold text-[#0B001C]">
+            <span className="uppercase font-thin text-sm lg:text-base">
+              Couverture étendue
+            </span>
+            <h2 className="text-3xl lg:text-5xl font-semibold text-[#0B001C]">
               Large couverture du territoire français et à l’international
             </h2>
           </div>
-          <div className="flex items-center gap-10 justify-around">
+          <div className="flex flex-col items-center gap-10 justify-around">
             <Image
               className="w-[500px] h-auto"
               src={interventionsArea}

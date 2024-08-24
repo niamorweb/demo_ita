@@ -54,7 +54,7 @@ export default function OurBlogs() {
             <ChevronRight className="w-4 h-4" />
           </button>
         </div>
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
           {data.map((elem, index) => (
             <div
               className="bg-white shadow-md rounded-xl flex flex-col overflow-hidden"
