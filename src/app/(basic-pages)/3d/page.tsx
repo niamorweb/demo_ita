@@ -97,7 +97,7 @@ export default function ThreeDModel() {
   const isInView2 = useInView(textRef2, { once: false });
 
   return (
-    <section className="px-10 py-32">
+    <section className="px-10 pt-32 pb-60">
       <div className="max-w-[1400px] mx-auto">
         <div className="flex flex-col relative">
           <div className="mx-auto flex flex-col items-center gap-3 max-w-[700px] ">

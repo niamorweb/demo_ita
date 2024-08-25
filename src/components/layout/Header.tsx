@@ -26,6 +26,10 @@ export default function Header() {
 
   const links = [
     {
+      name: "Drone 3D",
+      href: "/3d",
+    },
+    {
       name: "Notre histoire",
       href: "/notre-histoire",
     },
