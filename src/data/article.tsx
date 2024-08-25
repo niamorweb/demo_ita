@@ -5,7 +5,6 @@ export const article = {
   shortDescription:
     "Découvrez comment l'intelligence artificielle transforme la cartographie topographique et améliore la précision des modèles de terrain.",
   content: `
-    <h1>L'IA et la Révolution de la Cartographie Topographique</h1>
     <p>La cartographie topographique a connu d'énormes avancées grâce à l'émergence de l'intelligence artificielle (IA). Cette technologie transforme non seulement la manière dont les cartes sont créées, mais aussi la précision et l'efficacité de la collecte des données. Cet article explore les principaux aspects de cette révolution et ses impacts sur diverses industries.</p>
     
     <h2>1. Précision Améliorée grâce aux Algorithmes d'IA</h2>

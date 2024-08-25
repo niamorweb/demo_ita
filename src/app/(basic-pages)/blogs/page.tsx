@@ -9,10 +9,17 @@ export default function page() {
 
   return (
     <div>
-      <div className="border-b border-b-black/70 h-[100px] w-full"></div>
-      <div className="grid gap-20 max-w-[1400px] max-auto px-10 py-32">
-        <h2 className="text-5xl">Nos articles</h2>
-        <div className="grid grid-cols-4 gap-6">
+      <div className="grid gap-20 max-w-[1400px] max-auto px-10 py-28">
+        <div className="mx-auto flex flex-col items-center gap-3 max-w-[700px] ">
+          <h2 className="text-xl lg:text-3xl font-semibold text-[#0B001C]">
+            Nos articles
+          </h2>
+          <p className=" text-black/70 text-center">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis in
+            magni natus optio!
+          </p>
+        </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {elements.map((elem, index) => (
             <div
               className="bg-white shadow-md rounded-xl flex flex-col overflow-hidden"
@@ -20,7 +27,7 @@ export default function page() {
             >
               <Image
                 className="w-full duration-300 object-cover flex-1 max-h-[200px]"
-                src={article.image}
+                src={`https://picsum.photos/id/${index + 1}/200/300`}
                 width={500}
                 height={500}
                 alt=""

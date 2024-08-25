@@ -17,13 +17,13 @@ export default function page() {
           <span className="text-sm text-white/70">
             {article.readingTime} de lecture
           </span>
-          <h2 className="text-4xl font-semibold text-center">
+          <h2 className="text-xl lg:text-3xl font-semibold text-center">
             {article.title}
           </h2>
         </div>
       </div>
-      <div className=" max-w-[800px] mx-auto flex flex-col mt-12 gap-4">
-        <div className=" mt-12">
+      <div className="px-4 lg:px-10">
+        <div className="max-w-[800px] mx-auto flex flex-col mt-12 gap-4">
           <div
             className="blog-content"
             dangerouslySetInnerHTML={{ __html: article.content }}

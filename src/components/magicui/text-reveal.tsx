@@ -7,7 +7,7 @@ import { cn } from "@/utils/cn";
 interface TextRevealByWordProps {
   text: string;
   className?: string;
-  coloredWords?: string[]; // Liste des mots ou phrases à colorer dès le début
+  coloredWords?: { word: string; color: string }[];
 }
 
 export const TextRevealByWord: FC<TextRevealByWordProps> = ({
@@ -23,19 +23,19 @@ export const TextRevealByWord: FC<TextRevealByWordProps> = ({
 
   // Fonction pour découper le texte en segments, en incluant les groupes de mots colorés
   const getSegments = () => {
-    let segments: { text: string; isColored: boolean }[] = [];
+    let segments: { text: string; color?: string }[] = [];
     let currentIndex = 0;
 
     while (currentIndex < text.length) {
       let match = false;
 
       for (let i = 0; i < coloredWords.length; i++) {
-        if (text.startsWith(coloredWords[i], currentIndex)) {
+        if (text.startsWith(coloredWords[i].word, currentIndex)) {
           segments.push({
-            text: coloredWords[i],
-            isColored: true,
+            text: coloredWords[i].word,
+            color: coloredWords[i].color, // Associe la couleur spécifique
           });
-          currentIndex += coloredWords[i].length;
+          currentIndex += coloredWords[i].word.length;
           match = true;
           break;
         }
@@ -47,7 +47,6 @@ export const TextRevealByWord: FC<TextRevealByWordProps> = ({
           nextSpaceIndex === -1 ? text.length : nextSpaceIndex + 1;
         segments.push({
           text: text.slice(currentIndex, wordEnd),
-          isColored: false,
         });
         currentIndex = wordEnd;
       }
@@ -79,7 +78,7 @@ export const TextRevealByWord: FC<TextRevealByWordProps> = ({
                 key={i}
                 progress={scrollYProgress}
                 range={[start, end]}
-                isColored={segment.isColored} // Vérifie si le segment doit être coloré
+                color={segment.color} // Utilise la couleur spécifique du segment
               >
                 {segment.text}
               </Word>
@@ -95,17 +94,20 @@ interface WordProps {
   children: ReactNode;
   progress: any;
   range: [number, number];
-  isColored: boolean; // Propriété pour savoir si le mot doit être coloré
+  color?: string; // Propriété pour la couleur spécifique
 }
 
-const Word: FC<WordProps> = ({ children, progress, range, isColored }) => {
+const Word: FC<WordProps> = ({ children, progress, range, color }) => {
   const opacity = useTransform(progress, range, [0, 1]);
   return (
-    <span className="xl:lg-3 relative mx-1 lg:mx-2.5">
+    <span
+      className="relative mx-1 lg:mx-2.5 inline-block" // Ajout de inline-block
+      style={{ whiteSpace: "pre-wrap" }} // Garde les sauts de ligne, mais évite le retour à la ligne automatique non désiré
+    >
       <span className={"absolute opacity-30"}>{children}</span>
       <motion.span
-        style={isColored ? {} : { opacity: opacity }} // Pas d'animation si le segment est coloré
-        className={isColored ? "text-secondary" : "text-black"} // Applique une couleur spécifique
+        style={color ? { color } : { opacity: opacity }} // Applique la couleur spécifique si présente
+        className={color ? "inline-block" : "text-black inline-block"}
       >
         {children}
       </motion.span>

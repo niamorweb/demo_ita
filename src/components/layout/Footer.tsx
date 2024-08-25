@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="px-10 py-20 bg-[#232222] text-white">
       <div className="max-w-[1400px] overflow-hidden mx-auto flex flex-col gap-5">
-        <nav className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-3 bg-white text-[#0B001C] rounded-3xl py-20 px-10">
+        <nav className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-3 bg-[#F4F0EE] text-[#0B001C] rounded-3xl py-20 px-10">
           <div className="flex flex-col gap-3 text-sm">
             <span className="text-xl font-semibold">intheair</span>
             <p>

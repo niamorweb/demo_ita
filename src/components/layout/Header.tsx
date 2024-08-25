@@ -10,11 +10,11 @@ export default function Header() {
   const { scrollY } = useScroll();
 
   // Réduire la hauteur du header lors du défilement
-  const paddingY = useTransform(scrollY, [0, 200], ["20px", "5px"]);
+  const paddingY = useTransform(scrollY, [0, 200], ["16px", "6px"]);
   const backgroundColor = useTransform(
     scrollY,
     [0, 200],
-    ["rgba(255, 255, 255, 0)", "rgba(0, 0, 0, 0.6)"]
+    ["rgba(0, 0, 0, 0)", "rgba(0, 0, 0, 0.6)"]
   );
   const backdropBlur = useTransform(scrollY, [0, 200], ["0px", "10px"]);
 
@@ -26,20 +26,16 @@ export default function Header() {
 
   const links = [
     {
-      name: "Nos expertises",
-      href: "#",
+      name: "Notre histoire",
+      href: "/notre-histoire",
     },
     {
-      name: "A propos de nous",
-      href: "#",
+      name: "Blogs",
+      href: "/blogs",
     },
     {
-      name: "Plateforme",
-      href: "#",
-    },
-    {
-      name: "Contact",
-      href: "#",
+      name: "Blog exemple",
+      href: "/blog-exemple",
     },
   ];
 
@@ -52,23 +48,25 @@ export default function Header() {
         backgroundColor,
         backdropFilter: `blur(${backdropBlur})`,
       }}
-      className="fixed top-0 px-5 left-0 right-0 z-50 w-full text-white"
+      className="fixed top-0 px-10 left-0 right-0 z-50 w-full text-white"
     >
-      <nav className="max-w-[1400px] rounded-full overflow-hidden mx-auto py-4 flex items-center justify-between gap-3">
-        <span className="text-xl font-bold">intheair</span>
+      <nav className="max-w-[1400px] py-2 rounded-full overflow-hidden mx-auto flex items-center justify-between gap-3">
+        <Link href="/" className="text-xl font-bold">
+          intheair
+        </Link>
         <div className="hidden lg:flex items-center gap-5 text-sm">
           {links.map((link, index) => (
             <Link href={link.href} key={index}>
               {link.name}
             </Link>
           ))}
-          <button className="w-fit rounded-3xl bg-secondary text-white hover:scale-[102%] duration-150 py-2 px-5">
+          <button className="w-fit rounded-full bg-secondary text-white hover:scale-[102%] duration-150 py-2 px-5">
             Demander une démo
           </button>
         </div>
         <button
           onClick={() => setIsMobileNavActive(true)}
-          className="lg:hidden flex bg-white w-10 h-10 justify-center items-center rounded-full text-black"
+          className="lg:hidden flex w-10 h-10 justify-center items-center rounded-lg text-white"
         >
           <Menu />
         </button>

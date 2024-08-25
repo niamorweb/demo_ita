@@ -27,7 +27,7 @@ const BlurIn = ({ word, className, variant, duration = 1 }: BlurIntProps) => {
       variants={combinedVariants}
       className={cn(
         className,
-        "font-display font-bold tracking-[-0.02em] drop-shadow-sm md:text-7xl md:leading-[5rem]"
+        "font-display font-bold tracking-[-0.02em] drop-shadow-sm"
       )}
     >
       {word}

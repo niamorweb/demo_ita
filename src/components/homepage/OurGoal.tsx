@@ -91,7 +91,7 @@ export default function OurGoal() {
           </div>
         </div>
 
-        <div className="flex items-center mt-20 justify-center gap-6 mx-auto max-w-[1000]">
+        <div className="flex items-center flex-wrap lg:mt-20 justify-center gap-6 mx-auto max-w-[1000]">
           {stats.map((stat, index) => (
             <>
               <div className="flex flex-col items-center text-center">
