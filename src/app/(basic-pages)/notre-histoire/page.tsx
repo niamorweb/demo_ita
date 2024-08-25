@@ -5,15 +5,7 @@ import NumberTicker from "@/components/magicui/number-ticket";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ChevronRight } from "lucide-react";
 
-export default function page() {
-  const stats = [
-    { value: 800, label: "Ha topographiés" },
-    { value: 250, label: "Projets réalisés" },
-    { value: 15, label: "Ingénieurs spécialisés" },
-    { value: 100, label: "Territoire français couvert" },
-    { value: 20, label: "Clients grands comptes" },
-  ];
-
+export default function Page() {
   const ref = useRef(null);
   const { scrollY } = useScroll();
   const [inView, setInView] = useState(false);
