@@ -18,32 +18,34 @@ import Image from "next/image";
 import { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import HeroSlider from "@/components/homepage/HeroSlider";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
-  useEffect(() => {
-    // Section Two ScrollTrigger
-    ScrollTrigger.create({
-      trigger: ".section-two",
-      start: "top 20%",
-      end: "bottom 0%",
-      onEnter: () => {
-        gsap.to(".section-two", { duration: 1.0, backgroundColor: "#fff" });
-      },
-      onLeaveBack: () => {
-        gsap.to(".section-two", { duration: 1.0, backgroundColor: "#000000" });
-      },
-    });
-  }, []);
+  // useEffect(() => {
+  //   // Section Two ScrollTrigger
+  //   ScrollTrigger.create({
+  //     trigger: ".section-two",
+  //     start: "top 20%",
+  //     end: "bottom 0%",
+  //     onEnter: () => {
+  //       gsap.to(".section-two", { duration: 1.0, backgroundColor: "#fff" });
+  //     },
+  //     onLeaveBack: () => {
+  //       gsap.to(".section-two", { duration: 1.0, backgroundColor: "#000000" });
+  //     },
+  //   });
+  // }, []);
 
   return (
     <div className="relative">
       {/* <Header /> */}
       {/* <BackgroundChanger /> */}
-      <Hero />
+      <HeroSlider />
+      {/* <Hero /> */}
       {/* <TheyTrustUs /> */}
-      <section id="intro" className="section-two bg-[#000000]">
+      <section id="intro" className="section-two bg-white">
         <div className="z-10 flex min-h-[42rem] items-center justify-center rounded-lg">
           <TextRevealByWord
             text="Première entreprise GreenTech, Intheair rend accessible l'imagerie aérienne à un niveau jamais vu auparavant en facilitant l'accès
@@ -60,6 +62,7 @@ export default function Home() {
           />
         </div>
       </section>
+      {/* <HeroSlider /> */}
       <OurGoal />
       <OurPrestations />
       <YourSupport />

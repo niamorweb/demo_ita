@@ -100,7 +100,7 @@ export default function ExtensiveCoverage() {
         <div className="max-w-[1400px] py-16 relative mx-auto flex flex-col gap-12 text-white items-center text-center">
           <motion.div
             style={{ scale, borderRadius }}
-            className="absolute max-w-[95vw] top-0 left-0 right-0 bottom-0 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-b from-[#232222] via-[#141313] to-95% to-black w-full h-full"
+            className="absolute max-w-[95vw] top-0 left-0 right-0 bottom-0 -translate-x-1/2 -translate-y-1/2 bg-[#232222] w-full h-full"
           ></motion.div>
           <div className="flex flex-col gap-14 max-w-[1000px] z-10">
             <div className="flex flex-col gap-3">
