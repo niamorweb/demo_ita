@@ -39,7 +39,7 @@ export default function Header() {
     },
     {
       name: "Blog exemple",
-      href: "/blog-exemple",
+      href: "/blog-example",
     },
   ];
 
