@@ -27,14 +27,14 @@ const data = [
     title: "Études géodésiques",
     description:
       "Nos experts en géodésie utilisent des technologies avancées pour vous fournir des mesures précises et fiables pour vos projets.",
-    img: "https://cdn.pixabay.com/photo/2017/03/13/07/34/photovoltaic-2138992_1280.jpg",
+    img: "https://cdn.pixabay.com/photo/2017/07/29/13/17/plant-2551467_1280.jpg",
     category: "Etudes",
   },
   {
     title: "Cartographie numérique",
     description:
       "Obtenez des cartes numériques détaillées et précises adaptées à vos besoins grâce à nos outils de cartographie avancés.",
-    img: "https://cdn.pixabay.com/photo/2017/03/13/07/34/photovoltaic-2138992_1280.jpg",
+    img: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fon.abdn.ac.uk%2Fresources%2F7bc%2FH6H4qJ5Zkya7tP4Qg8SrHhNz7vXN-1600w.jpg&f=1&nofb=1&ipt=95a0a5b5ba95076a9e0215b47fc433341de3362919691778ff824107405c63d1&ipo=images",
     category: "Cartographie",
   },
   {

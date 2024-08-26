@@ -46,8 +46,8 @@ export default function Home() {
       <section id="intro" className="section-two bg-[#000000]">
         <div className="z-10 flex min-h-[42rem] items-center justify-center rounded-lg">
           <TextRevealByWord
-            text="Première entreprise GreenTech🌳 Intheair rend accessible l'imagerie aérienne à un niveau jamais vu auparavant en facilitant l'accès
-              à la captation de données par drone et satellite 🛰️, leur analyse
+            text="Première entreprise GreenTech, Intheair rend accessible l'imagerie aérienne à un niveau jamais vu auparavant en facilitant l'accès
+              à la captation de données par drone et satellite, leur analyse
               immédiate, suivies de recommandations concrètes.."
             coloredWords={[
               { word: "GreenTech", color: "#16651D" },
