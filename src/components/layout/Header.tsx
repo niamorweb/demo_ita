@@ -52,7 +52,7 @@ export default function Header() {
         backgroundColor,
         backdropFilter: `blur(${backdropBlur})`,
       }}
-      className="fixed top-0 px-10 left-0 right-0 z-50 w-full text-white"
+      className="fixed top-0 px-10 left-0 right-0 z-[100] w-full text-white"
     >
       <nav className="max-w-[1400px] py-2 rounded-full overflow-hidden mx-auto flex items-center justify-between gap-3">
         <Link href="/" className="text-xl font-bold">

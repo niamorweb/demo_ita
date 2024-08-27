@@ -45,7 +45,7 @@ export default function Home() {
       <HeroSlider />
       {/* <Hero /> */}
       {/* <TheyTrustUs /> */}
-      <section id="intro" className="section-two bg-white">
+      {/* <section id="intro" className="section-two bg-white">
         <div className="z-10 flex min-h-[42rem] items-center justify-center rounded-lg">
           <TextRevealByWord
             text="Première entreprise GreenTech, Intheair rend accessible l'imagerie aérienne à un niveau jamais vu auparavant en facilitant l'accès
@@ -61,10 +61,10 @@ export default function Home() {
             ]}
           />
         </div>
-      </section>
+      </section> */}
       {/* <HeroSlider /> */}
       <OurGoal />
-      <OurPrestations />
+      {/* <OurPrestations /> */}
       <YourSupport />
       <ExtensiveCoverage />
       <OurBlogs />
