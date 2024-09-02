@@ -1,12 +1,10 @@
-import { article } from "@/data/article";
+import { articles } from "@/data/articles";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 export default function page() {
-  const elements = Array(24).fill(null);
-
   return (
     <div>
       <div className="grid gap-20 max-w-[1400px] max-auto px-10 py-28">
@@ -20,28 +18,28 @@ export default function page() {
           </p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {elements.map((elem, index) => (
+          {articles.map((elem, index) => (
             <div
-              className="bg-white shadow-md rounded-xl flex flex-col overflow-hidden"
+              className="bg-white shadow-md rounded-xl flex flex-col overflow-hidden "
               key={index}
             >
               <Image
-                className="w-full duration-300 object-cover flex-1 max-h-[200px]"
-                src={`https://picsum.photos/id/${index + 1}/200/300`}
+                className="w-full duration-300 object-cover overflow-hidden h-[200px]"
+                src={elem.image}
                 width={500}
                 height={500}
                 alt=""
               />
-              <div className="flex flex-col justify-between p-4 gap-6 h-full max-w-[400px]">
+              <div className="flex flex-col justify-between p-4 gap-4 h-full max-w-[400px]">
                 <div className="flex flex-col gap-3">
                   <p className="text-sm text-black/70">Lecture: 3 min</p>
-                  <h4 className="text-xl">{article.title}</h4>
+                  <h4 className="text-xl">{elem.title}</h4>
                   <p className="text-sm text-black/70">
-                    {article.shortDescription}
+                    {elem.shortDescription}
                   </p>
                 </div>{" "}
                 <Link
-                  href="/blog-example"
+                  href={`/blog/${elem.id}`}
                   className="flex self-end items-center gap-2 hover:underline underline-offset-2 duration-300 hover:gap-3 text-sm group"
                 >
                   Lire l'article <ChevronRight className="w-4 h-4 " />{" "}

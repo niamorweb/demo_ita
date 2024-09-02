@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import serviceImgCompressed1 from "/assets/services/compressed_1.jpg";
 import serviceImgCompressed2 from "@/assets/compressed_2.jpg";
@@ -102,6 +102,22 @@ const HeroSlider = () => {
   };
 
   const activeImageIndex = positionIndexes.indexOf(0);
+
+  useEffect(() => {
+    const handleKeyDown = (e: any) => {
+      if (e.key === "ArrowRight") {
+        handleNext();
+      } else if (e.key === "ArrowLeft") {
+        handleBack();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
 
   return (
     <div className="flex relative items-center flex-col justify-center bg-black h-screen">

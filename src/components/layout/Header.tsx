@@ -29,18 +29,18 @@ export default function Header() {
       name: "Drone 3D",
       href: "/3d",
     },
-    {
-      name: "Notre histoire",
-      href: "/notre-histoire",
-    },
+    // {
+    //   name: "Notre histoire",
+    //   href: "/notre-histoire",
+    // },
     {
       name: "Blogs",
       href: "/blogs",
     },
-    {
-      name: "Blog exemple",
-      href: "/blog-example",
-    },
+    // {
+    //   name: "Blog exemple",
+    //   href: "/blog-example",
+    // },
   ];
 
   return (
